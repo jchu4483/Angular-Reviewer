@@ -1,8 +1,10 @@
 (function() {
   'use strict'
 
-  function ReviewController(ReviewFactory) {
+  function ReviewController(reviewFactory) {
     var ctrl = this
+
+    ctrl.hello = "hello!"
 
     activate()
 
@@ -11,7 +13,7 @@
     }
 
     function getReviews() {
-      return ReviewFactory.getReviews()
+      return reviewFactory.getReviews()
         .then(setReviews)
     }
 

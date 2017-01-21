@@ -1,7 +1,7 @@
 (function() {
   'use strict'
 
-  function ReviewFactory($http) {
+  function reviewFactory($http) {
     return {
       getReviews: getReviews
     }
@@ -11,18 +11,20 @@
         .then(handleResponse)
         .catch(handleError)
     }
+
+    function handleResponse(response) {
+      console.log(data)
+      return response.data
+    }
+
+    function handleError(error) {
+      console.log(error)
+    }
   }
 
-  function handleResponse(response) {
-    console.log(data)
-    return response.data
-  }
 
-  function handleError(error) {
-    console.log(error)
-  }
 
   angular
     .module('ngDevise')
-    .factory('ReviewFactory', ReviewFactory)
+    .factory('reviewFactory', reviewFactory)
 }())
