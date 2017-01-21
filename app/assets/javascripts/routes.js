@@ -16,7 +16,7 @@
         controller: 'ReviewController as vm'
       })
       .state('home.review', {
-        url: '/review',
+        url: '/review/:id',
         templateUrl: 'reviews/review.html',
         controller: 'ReviewController as vm'
       })

@@ -16,7 +16,8 @@
     }
 
     function showReview() {
-      return ReviewFactory.setReview(id)
+      ReviewFactory.setReview($stateParams.id)
+      console.log($stateParams.id)
     }
 
     function setReviews(data) {
