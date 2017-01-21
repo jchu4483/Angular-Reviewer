@@ -1,10 +1,8 @@
 (function() {
   'use strict'
 
-  function ReviewController(ReviewFactory) {
+  function ReviewController(ReviewFactory, $stateParams) {
     var ctrl = this
-
-    ctrl.hello = "hello!"
 
     activate()
 
@@ -15,6 +13,10 @@
     function getReviews() {
       return ReviewFactory.getReviews()
         .then(setReviews)
+    }
+
+    function showReview() {
+      return ReviewFactory.setReview(id)
     }
 
     function setReviews(data) {

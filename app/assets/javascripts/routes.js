@@ -15,6 +15,11 @@
         templateUrl: 'reviews/reviews.html',
         controller: 'ReviewController as vm'
       })
+      .state('home.review', {
+        url: '/review',
+        templateUrl: 'reviews/review.html',
+        controller: 'ReviewController as vm'
+      })
 
       $urlRouterProvider.otherwise('/')
     })
