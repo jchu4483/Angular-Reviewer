@@ -1,7 +1,7 @@
 (function() {
   'use strict'
 
-  function ReviewController(reviewFactory) {
+  function ReviewController(ReviewFactory) {
     var ctrl = this
 
     ctrl.hello = "hello!"
@@ -13,7 +13,7 @@
     }
 
     function getReviews() {
-      return reviewFactory.getReviews()
+      return ReviewFactory.getReviews()
         .then(setReviews)
     }
 
@@ -22,7 +22,6 @@
     }
   }
 
-  ReviewController.$inject = ['$scope']
 
   angular
     .module('ngDevise')
